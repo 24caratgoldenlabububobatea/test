@@ -1,0 +1,356 @@
+/* GENERAL */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url("../bilder/akademiet.png") center center / cover no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    height: 120px;
+}
+
+.Orange-bg {
+    background: #F08921;
+    clip-path: polygon(0 0, 53% 0, 95% 50%, 0 19%);
+    height: 300%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.white-bg {
+    background: #ffffff;
+    clip-path: polygon(100% 0, 47% 0, 5% 50%, 100% 22%);
+    height: 300%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    position: absolute;
+    right: 2rem;
+    top: 30%;
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    background: black;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transform: skew(-3deg);
+}
+
+/* SHAPES */
+.content {
+    position: relative;
+    margin-top: 100px;
+    padding: 3rem;
+}
+
+.shapes {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+}
+
+/* Red base shape, it's not red anymore but i don't feel like chaning the nameeeeee.
+ i changed my mind half way through making this site*/
+.shape.red {
+    background: #F08921;
+    width: 600px;
+    height: 400px;
+    left: 200px;
+    top: 50px;
+    z-index: 1;
+}
+
+/* Black middle shape */
+.shape.black {
+    background: #000;
+    width: 550px;
+    height: 380px;
+    left: 220px;
+    top: 70px;
+    z-index: 2;
+    clip-path: polygon(10% 15%, 80% 0, 100% 50%, 80% 100%, 0 85%);
+}
+
+/* White front shape */
+.shape.white {
+    background: #fff;
+    width: 500px;
+    height: 350px;
+    left: 240px;
+    top: 90px;
+    z-index: 3;
+    padding: 2rem;
+    clip-path: polygon(0 5%, 80% 0, 100% 60%, 80% 100%, 5% 95%);
+}
+
+.shape.white p {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.8;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;             /* center horizontally */
+    top: 37px;             /* adjust vertical position */
+    transform: translateX(-50%); /* horizontal centering */
+    width: 150px;
+    height: 50px;
+    background-image: url("../bilder/akademiet_logo.png");
+    background-size: 100% 100%;   
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*footer*/
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo .logo {
+  width: 150px;
+  height: 50px;
+  background-image: url("../bilder/akademiet_logo.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #f39c12; /* highlight color on hover */
+}
+
+.footer-socials a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #f39c12;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* meny page */
+
+.meals-container {
+    position: relative;       
+    z-index: 10;
+    margin: 50px 0 30px 200px;        
+    display: flex;            
+    flex-wrap: wrap;       
+    padding: 20px;
+    max-width: 180px;    
+    transform: skew(-3deg);    
+    gap: 10px; 
+    color :#ffffff
+    
+}
+
+.meal {
+    background-color: #f39c12;
+    padding: 15px 25px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+}
+
+.food-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.meal-card {
+    background-color: #f39c12;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 180px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-4px);
+}
+
+.meal-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.meal-card p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+/* kontakt oss */
+
+/* Kontakt-side styling */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 900px;            /* keeps it from going too wide */
+    background-color: #fff3e0;   /* soft orange background */
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contact-container h1 {
+    margin: 0 0 12px 0;
+    color: #e67e22;
+    font-size: 1.8rem;
+}
+
+.contact-desc {
+    margin: 0 0 20px 0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Flexbox row for contact items (phone + email) */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 36px;           /* space between phone and email boxes */
+    margin-top: 18px;
+    flex-wrap: wrap;     /* wrap on small screens */
+    align-items: stretch;
+}
+
+/* Individual contact card */
+.contact-item {
+    background-color: #ffffff;
+    padding: 20px 26px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    flex: 1 1 220px;     
+    max-width: 320px;   
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contact-item h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.05rem;
+    color: #e67e22;
+}
+
+.contact-data {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* actions / buttons area */
+.contact-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+/* button style */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.back-btn {
+    background-color: #e67e22;
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(230,126,34,0.18);
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Testing responsiveness, i haven't used this on the other parts of the site but it i should do it more next time i think! */
+@media (max-width: 560px) {
+    .contact-container {
+        padding: 22px;
+    }
+    .contact-info {
+        gap: 14px;
+    }
+    .contact-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
